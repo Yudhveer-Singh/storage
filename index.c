@@ -1,22 +1,18 @@
 #include <stdio.h>
-void Delete(int [], int,int,int);
 int main(){
-    int A[5]={55,33,42};
-    Delete(A,5,3,2);
+    /*int *x;
+    int s=10;
+    x=&s;
+    x=new int(10);
+    printf("x=%u\n",x);
+    x=20;
+    printf("x=%d\n",x);*/
+    int A[5]={11,22,33,44,55};
+    int *p;
+    p=A;
     for(int i=0;i<5;i++){
-        printf("%d,",A[i]);
+        printf("%d ",*p);
+        p++;
     }
-    printf("\n");
     return 0;
-}
-void Delete(int A[],int size, int c, int loc){
-    if(c==0){
-        printf("underflow");
-    }
-    else{
-        for(int i=loc-1; i<=c-1;i++){
-            A[i]=A[i+1];
-        }
-        c--;
-    }
 }
